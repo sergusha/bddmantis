@@ -11,13 +11,13 @@ import org.testng.Assert;
  */
 public class ViewIssuePage {
 
-    @FindBy(xpath = "//*[@id=\"main-container\"]/div[2]/div[2]/div/div[1]/div/div[2]/div[2]/div/table/tfoot/tr/td/div/div[3]/form/select") //TODO: FIX SELECTOR
+    @FindBy(xpath = "//select[@name=\"new_status\"]")
     WebElement changeStatus;
 
-    @FindBy(xpath = "//*[@id=\"main-container\"]/div[2]/div[2]/div/div[1]/div/div[2]/div[2]/div/table/tfoot/tr/td/div/div[3]/form/input[1]") //TODO: FIX SELECTOR
+    @FindBy(xpath = "//input[@value=\"Change Status To:\"]")
     WebElement changeStatusBtn;
 
-    @FindBy(xpath = "//*[@id=\"bug-change-status-form\"]/fieldset/div/div[2]/div[2]/input")
+    @FindBy(xpath = "//input[@value=\"Edit\"]")
     WebElement resolveBtn;
 
     @FindBy(xpath = "//td[@class=\"bug-assigned-to\"]")

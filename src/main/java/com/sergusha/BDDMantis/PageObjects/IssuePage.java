@@ -38,7 +38,7 @@ public class IssuePage {
     @FindBy(id = "additional_info")
     WebElement additional_info;
 
-    @FindBy(xpath = "//*[@id=\"report_bug_form\"]/div/div[2]/div[2]/input")
+    @FindBy(xpath = "//input[@tabindex=\"18\"]")
     WebElement submitBtn;
 
     @FindBy(xpath = "//*[@id=\"profile_closed_link\"]/i")
