@@ -1,0 +1,23 @@
+{
+  "administrator": {
+    "login": "administrator",
+    "password": "administrator"
+  },
+  "tester": {
+    "login": "tester",
+    "password": "tester"
+  },
+  "tester1": {
+    "login": "tester1",
+    "password": "tester1"
+  },
+  "dev1": {
+    "login": "dev1",
+    "password": "dev1"
+  },
+  "lead1": {
+    "login": "lead1",
+    "password": "lead1"
+  }
+
+}
