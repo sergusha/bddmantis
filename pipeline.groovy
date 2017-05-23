@@ -6,7 +6,7 @@ node {
         failedFeaturesNumber: 0,
         failedScenariosNumber: 0,
         failedStepsNumber: 0, fileExcludePattern: '',
-        fileIncludePattern: '**/*.json',
+        fileIncludePattern: '**/mainReport.json',
         jsonReportDirectory: '',
         pendingStepsNumber: 0,
         skippedStepsNumber: 0,
