@@ -54,7 +54,8 @@ public class IssuePage {
     WebElement os_version_field;
 
 
-    public void fillFields(Issue issue){
+    public void fillFields(Issue issue) {
+
         new Select(category).selectByVisibleText(issue.getCategory());
         new Select(reproducibility).selectByVisibleText(issue.getReproducibility());
         new Select(severity).selectByVisibleText(issue.getSeverity());

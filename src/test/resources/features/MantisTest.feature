@@ -8,8 +8,6 @@ Feature: Bug report cycle
      Then user opens the bug table
       And user finds the "assigned (dev1)" issue
       And logouts
-
-  Scenario: developer resolves the issue
     Given User logs in as "dev1"
       And user opens the bug table
      When user opens the "assigned (dev1)" issue
@@ -18,8 +16,6 @@ Feature: Bug report cycle
      Then user opens the bug table
       And user finds the "resolved (dev1)" issue
       And logouts
-
-  Scenario: lead closes the issue
     Given User logs in as "lead1"
       And user opens the bug table
      When user opens the "resolved (dev1)" issue

@@ -52,8 +52,6 @@ public class MainPage {
     }
 
 
-//
-
     public void openReportIssueForm(){
         reportIssueBtn.click();
     }

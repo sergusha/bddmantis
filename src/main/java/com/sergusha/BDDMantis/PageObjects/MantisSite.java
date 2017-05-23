@@ -18,12 +18,14 @@ public class MantisSite {
 
     public static WebDriver driver;
 
+
     public static void init(WebDriver driver){
         MantisSite.loginPage     = PageFactory.initElements(driver, LoginPage.class);
         MantisSite.issuePage     = PageFactory.initElements(driver, IssuePage.class);
         MantisSite.mainPage      = PageFactory.initElements(driver, MainPage.class);
         MantisSite.viewIssuePage = PageFactory.initElements(driver, ViewIssuePage.class);
         MantisSite.driver        = driver;
+
     }
 
     public static void gotoBugTable() { driver.navigate().to("http://127.0.0.1/mantisbt/view_all_bug_page.php"); }

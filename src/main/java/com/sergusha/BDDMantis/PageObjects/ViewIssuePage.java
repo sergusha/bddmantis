@@ -17,8 +17,11 @@ public class ViewIssuePage {
     @FindBy(xpath = "//input[@value=\"Change Status To:\"]")
     WebElement changeStatusBtn;
 
-    @FindBy(xpath = "//input[@value=\"Edit\"]")
+    @FindBy(xpath = "//input[@value=\"Resolve Issue\"]")
     WebElement resolveBtn;
+
+    @FindBy(xpath = "//input[@value=\"Close Issue\"]")
+    WebElement CloseBtn;
 
     @FindBy(xpath = "//td[@class=\"bug-assigned-to\"]")
     WebElement bugAssigned;
@@ -93,6 +96,6 @@ public class ViewIssuePage {
         Select selector = new Select(changeStatus);
         selector.selectByVisibleText(status);
         changeStatusBtn.click();
-        resolveBtn.click();
+        CloseBtn.click();
     }
 }

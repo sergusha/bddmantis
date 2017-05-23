@@ -22,6 +22,19 @@ public class Stepdefs {
 
     private static User user;
 
+    private void setupIssue(String issue_name){
+        Random random = new Random();
+        issue = ResourceLoaderMantis.issues.get(issue_name);
+        issue.setOs(System.getProperty("os.name"));
+        issue.setOsVersion(System.getProperty("os.version"));
+        issue.setPlatform(System.getProperty("os.arch"));
+
+        issue.setDescription(issue.getDescription() + random.nextInt());
+        issue.setSummary(issue.getSummary() + random.nextInt());
+        issue.setAdditional_info(issue.getAdditional_info() + random.nextInt());
+        issue.setSteps_to_reproduce(issue.getSteps_to_reproduce() + random.nextInt());
+    }
+
     @Given("^User logs in as \"([^\"]*)\"$")
     public void userLogsInAs(String login) throws Throwable {
         MantisSite.open();
@@ -36,17 +49,7 @@ public class Stepdefs {
 
     @When("^user fills the form with \"([^\"]*)\"$")
     public void userFillsTheIssueWith(String issue_name) throws Throwable{
-        Random random = new Random();
-        issue = ResourceLoaderMantis.issues.get(issue_name);
-        issue.setOs(System.getProperty("os.name"));
-        issue.setOsVersion(System.getProperty("os.version"));
-        issue.setPlatform(System.getProperty("os.arch"));
-
-        issue.setDescription(issue.getDescription() + random.nextInt());
-        issue.setSummary(issue.getSummary() + random.nextInt());
-        issue.setAdditional_info(issue.getAdditional_info() + random.nextInt());
-        issue.setSteps_to_reproduce(issue.getSteps_to_reproduce() + random.nextInt());
-
+        setupIssue(issue_name);
         MantisSite.issuePage.fillFields(issue);
     }
 
