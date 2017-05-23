@@ -1,6 +1,6 @@
 node {
   git url: 'https://github.com/sergusha/bddmantis.git', branch: 'master'
-  def mvnHome = tool 'M3'
+//  def mvnHome = tool 'M3'
   sh "mvn clean test"
   step([$class: 'CucumberReportPublisher',
         failedFeaturesNumber: 0,
