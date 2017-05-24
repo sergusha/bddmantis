@@ -63,7 +63,8 @@ public class IssuePage {
         new Select(handler).selectByVisibleText(issue.getHandler());
         try {
             open_platform_btn.click(); //throws if not visible
-        } catch (ElementNotVisibleException e) {}
+        } catch (ElementNotVisibleException ignored) {}
+
         platform.sendKeys(issue.getPlatform());
         os_field.sendKeys(issue.getOs());
         os_version_field.sendKeys(issue.getOsVersion());

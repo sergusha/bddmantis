@@ -33,7 +33,8 @@ public class MainPage {
 
 
     public void findCreatedIssue(Issue issue, String assigned) {
-        Assert.assertTrue(MantisSite.driver.findElements(By.xpath("//*[@id=\"buglist\"]/tbody/tr")).stream().anyMatch(row ->
+        Assert.assertTrue(MantisSite.driver.findElements(By.xpath("//*[@id=\"buglist\"]/tbody/tr"))
+                .stream().anyMatch(row ->
                 (row.getText().contains(issue.getSummary()))
                         && (row.getText().contains("block"))
                         && (row.getText().contains(assigned))
