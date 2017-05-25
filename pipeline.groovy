@@ -1,6 +1,5 @@
 node {
  
-  wrap([$class: 'Xvfb']) {
   	git url: 'https://github.com/sergusha/bddmantis.git', branch: 'master'
   	sh "mvn clean test"
   	step([$class: 'CucumberReportPublisher',
@@ -12,6 +11,5 @@ node {
         	pendingStepsNumber: 0,
         	skippedStepsNumber: 0,
         	undefinedStepsNumber: 0])
-	}
 }
 
